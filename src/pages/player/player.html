@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Player</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Les hits les plus joués<br>sur Napster</h3>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+
+  <div *ngIf="nom && ville && age" id="presentation-infos">
+    <h2>Bonjour {{nom}}</h2>
+    <p>{{(age < 18 ? 'Vous ne pouvez pas écouter les titres tagués en Explicit lyrics.' : 'Vous pouvez écouter tous les titres car vous êtes majeur.')}}</p>
+    <p>Actuellement, sur {{ville}}, les internautes de {{age}} ans écoutent : </p>
+  </div>
+
+  <div *ngIf="nom || ville || age" id="presentation-errors">
+    <p>Certaines informations sont erronnées ou manquantes.</p>
+  </div>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
