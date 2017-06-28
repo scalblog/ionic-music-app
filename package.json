@@ -35,5 +35,5 @@
     "@ionic/cli-plugin-ionic-angular": "1.3.1",
     "typescript": "2.3.3"
   },
-  "description": "An Ionic project"
+  "description": "Musical Libray"
 }
